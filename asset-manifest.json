@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dseProject-client/static/css/main.9560c83e.css",
+    "main.js": "/dseProject-client/static/js/main.07e5303f.js",
+    "index.html": "/dseProject-client/index.html",
+    "main.9560c83e.css.map": "/dseProject-client/static/css/main.9560c83e.css.map",
+    "main.07e5303f.js.map": "/dseProject-client/static/js/main.07e5303f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9560c83e.css",
+    "static/js/main.07e5303f.js"
+  ]
+}
