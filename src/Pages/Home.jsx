@@ -26,7 +26,7 @@ function Home() {
   useEffect(() => {
     const fetchCompletedDevices = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/devices');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/devices`);
         setCompletedCount(response.data.length);
       } catch (error) {
         console.error('Error fetching completed devices:', error);

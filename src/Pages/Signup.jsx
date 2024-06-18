@@ -4,7 +4,7 @@ import { useSnackbar } from 'notistack';
 import { useNavigate, Link } from 'react-router-dom';
 import './register.css'; // Import CSS for signup form
 
-  const Signup = () => {
+const Signup = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -14,14 +14,14 @@ import './register.css'; // Import CSS for signup form
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/auth/register', { username, email, password });
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/register`, { username, email, password });
       console.log('Signup successful:', response.data);
       enqueueSnackbar('Signup successful', { variant: 'success' });
       // Redirect to the home page after successful signup
       navigate('/Home');
     } catch (error) {
-      console.error('Signup error:', error.response.data);
-      enqueueSnackbar(error.response.data.message, { variant: 'error' });
+      console.error('Signup error:', error.response?.data || error.message);
+      enqueueSnackbar(error.response?.data?.message || error.message, { variant: 'error' });
     }
   };
 
