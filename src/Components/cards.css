@@ -37,12 +37,12 @@
 
 @media screen and (max-width: 768px) {
   .card {
-    width: 140px; 
-    height: max-content; 
-    font-size: 10px; 
+    width: 100%; /* Use full width for better visibility */
+    height: auto; 
+    font-size: 14px; /* Increase font size for readability */
   }
   .card-line{
-    width: auto;
+    width: 100%; /* Ensure it fits within the card */
     height: auto;
   }
   .card-container{
