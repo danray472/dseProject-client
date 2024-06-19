@@ -45,10 +45,10 @@ import { FaTrash } from 'react-icons/fa';
     useEffect(() => {
       const fetchCompletedDevices = async () => {
         try {
-          const response = await axios.get('http://localhost:5000/devices/Trash');
+          const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/devices/Trash`);
           setCompletedCount(response.data.length);
         } catch (error) {
-          console.error('Error fetching completed devices:', error);
+          console.error('Error fetching removed devices:', error);
         }
       };
   

@@ -12,7 +12,7 @@ const DeviceList = ({ searchTerm }) => {
   useEffect(() => {
     const fetchDevices = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/devices');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/devices`);
         setDevices(response.data);
         setLoading(false); // Set loading state to false after fetching data
       } catch (error) {

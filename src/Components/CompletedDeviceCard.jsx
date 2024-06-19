@@ -13,7 +13,7 @@ const CompletedDeviceCard = ({ searchTerm, completedCount }) => { // Receive com
   useEffect(() => {
     const fetchCompletedDevices = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/devices/Completed');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/devices/Completed`);
         setCompleted(response.data);
         setLoading(false);
       } catch (error) {

@@ -22,7 +22,7 @@ const EditDevice = ({ device, onClose }) => {
   const handleEditDevice = (e) => {
     e.preventDefault();
     setLoading(true);
-    axios.patch(`http://localhost:5000/devices/${device._id}`, editedDevice)
+    axios.patch(`${process.env.REACT_APP_BACKEND_URL}/devices/${device._id}`, editedDevice)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Device status updated successfully', { variant: 'success' });

@@ -29,7 +29,7 @@ const AddDevice = ({ onClose }) => {
     setLoading(true);
     // Make a POST request to your backend API to save the device
     axios
-      .post('http://localhost:5000/devices', deviceInfo)
+      .post(`${process.env.REACT_APP_BACKEND_URL}/devices`, deviceInfo)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Device created successfully', { variant: 'success' });
