@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useSnackbar } from 'notistack';
 import { useNavigate, Link } from 'react-router-dom';
-import Spinner from './Spinner'; // Import Spinner component
+import Spinner from '../Components/Spinner'; // Import Spinner component
 import './login.css'; // Import CSS for login form
 
 const Login = () => {
