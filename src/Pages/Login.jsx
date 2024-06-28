@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true); // Set loading to true when form is submitted
     try {
-      const response = await axios.post('http://localhost:5000/auth/login', { email, password });
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, { email, password });
       console.log('Login successful:', response.data);
       enqueueSnackbar('Login successful', { variant: 'success' });
       navigate('/Home'); // Redirect to another page after successful login
